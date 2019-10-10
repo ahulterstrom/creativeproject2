@@ -24,5 +24,7 @@ function JaredFunction(){
 }
 
 function StephenFunction(){
-    document.getElementById("mainframe").innerHTML = "<p>Stephen</p>";   
+    let html = "<p>Stephen</p>";
+    
+    document.getElementById("mainframe").innerHTML = html;
 }
