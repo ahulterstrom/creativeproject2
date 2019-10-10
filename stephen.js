@@ -30,7 +30,7 @@ function newSortedDeck() {
     let html = "";
     html += "<input type='button' id='stephenbutton' value='New Sorted Deck' onclick='newSortedDeck()'> ";
     html += "<input type='button' id='stephenbutton' value='New Shuffled Deck' onclick='newShuffledDeck()'> ";
-    html += "<input type='button' id='stephenbutton' value='Next Card(s)' onclick='nextCard()'> <br> <br> ";
+    html += "<input type='button' id='stephenbutton' value='Draw Card(s)' onclick='nextCard()'> <br> <br> ";
     html += "<form>";
     html += "<label>Number of cards to draw: </label>";
     html += "<input id='numInput' type='text' value='1'></input> ";
@@ -57,7 +57,7 @@ function newShuffledDeck() {
     let html = "";
     html += "<input type='button' id='stephenbutton' value='New Sorted Deck' onclick='newSortedDeck()'> ";
     html += "<input type='button' id='stephenbutton' value='New Shuffled Deck' onclick='newShuffledDeck()'> ";
-    html += "<input type='button' id='stephenbutton' value='Next Card(s)' onclick='nextCard()'> <br> <br> ";
+    html += "<input type='button' id='stephenbutton' value='Draw Card(s)' onclick='nextCard()'> <br> <br> ";
     html += "<form>";
     html += "<label>Number of cards to draw: </label>";
     html += "<input id='numInput' type='text' value='1'></input> ";
