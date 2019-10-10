@@ -5,9 +5,24 @@ fetch(myurl, { mode: 'cors' })
         return response.json();
     }).then(function(json) {
         console.log(json);
-<<<<<<< HEAD
-        document.getElementById("cardimage").src = json["cards"][0].image;
-=======
-        document.getElementById("cardimage").src = json["img"];
->>>>>>> fixed getElmentbyID
+        // document.getElementById("cardimage").src = json["cards"][0].image;
     });
+
+
+function Reset(){
+    document.getElementById("mainframe").innerHTML = "<p>placeholder</p>";
+}
+
+Reset();
+
+function AndrewFunction(){
+    document.getElementById("mainframe").innerHTML = "<p>Andrew</p>";
+}
+
+function JaredFunction(){
+    document.getElementById("mainframe").innerHTML = "<p>Jard</p>";
+}
+
+function StephenFunction(){
+    document.getElementById("mainframe").innerHTML = "<p>Stephen</p>";   
+}
