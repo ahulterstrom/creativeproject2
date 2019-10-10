@@ -53,9 +53,59 @@
   width: 226px;
   height: 314px;
 }
-
+#titlearea{
+  margin: auto;
+  padding: 10px;
+  max-width: 1100px;
+}
+#titlearea h2{
+  text-align: center;
+}
 #matchingarea{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  position: absolute;
+  top: 170px;
+  max-width: 1200px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  transition: 1s;
+}
+
+#winnerdiv{
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  transition: 2s;
+}
+#winnerdiv h1{
+  font-family: impact;
+  font-size: 9em;
+  text-shadow: 0px 0px 40px #FFFFFF, 0px 0px 70px #FFFFFF, 0px 0px 120px #FFFFFF;
+}
+#matchresetbutton{
+  box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	border-radius:42px;
+	border:3px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:28px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+#matchresetbutton:hover {
+	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+#matchresetbutton:active {
+	position:relative;
+	top:1px;
 }

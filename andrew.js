@@ -4,7 +4,6 @@ function AndrewFunction() {
     let matched = [];
     let quotesarray = [];
     let acceptingInput = true;
-    document.getElementById("mainframe").innerHTML = "";
 
     // document.getElementById("mainframe").innerHTML = "<p>Andrew</p>";
     console.log("Called AndrewFunction()");
@@ -45,26 +44,41 @@ function AndrewFunction() {
         h2.innerHTML = "Welcome to the Ron Swanson Matching Game!";
         var p = document.createElement('p');
         p.id = ('instructions');
+        p.innerHTML = "Click the cards to flip them over and try to find matching pairs. <br>For each match you find you will be rewarded with a Ron Swanson Quote."
         titleDiv.append(h2,p);
         var matchingDiv = document.createElement('div');
         matchingDiv.id = ('matchingarea');
         var buttonsDiv = document.createElement('div');
         buttonsDiv.id = ('buttonsarea');
         
+        var winnerDiv = document.createElement('div');
+        winnerDiv.id = ('winnerdiv');
+        winnerDiv.style.display = "none";
+        winnerDiv.style.opacity = 0;
+        var h1 = document.createElement('h1');
+        h1.innerHTML = "WINNER!";
+        var resetbutton = document.createElement('button');
+        resetbutton.id = ('matchresetbutton');
+        resetbutton.innerHTML = "Click to Play Again!"
+        resetbutton.onclick = function() { AndrewFunction() };
+        winnerDiv.append(h1,resetbutton);
         
         
         
         
         
-        node.append(titleDiv, matchingDiv, buttonsDiv);
+        
+        
         for (i = 0; i < cardsarray.length; i++) {
-            createCard(i);
+            createCard(i, matchingDiv);
         }
-        document.getElementById("instructions").innerHTML = "Click the cards to flip them over and try to find matching pairs. <br>For each match you find you will be rewarded with a Ron Swanson Quote."
+        node.innerHTML = "";
+        node.append(titleDiv, matchingDiv, buttonsDiv, winnerDiv);
+        
     }
 
-    function createCard(i) {
-        var node = document.getElementById('matchingarea');
+    function createCard(i, matchingDiv) {
+        var node = matchingDiv;
 
         //Create the div to hold the card
         var newDiv = document.createElement('div');
@@ -144,6 +158,11 @@ function AndrewFunction() {
                 //check if the player won
                 if(matched.length == cardsarray.length){
                     console.log("We have a winner!")
+                    document.getElementById('winnerdiv').style.display = "block";
+                    document.getElementById('matchingarea').style.opacity = .4;
+                    setTimeout( function(){
+                        document.getElementById('winnerdiv').style.opacity = 1;
+                    }, 50)
                 }
             }
             
@@ -193,9 +212,6 @@ function AndrewFunction() {
             if (quotesarray.length < (matched.length/2)){
                 updateQuote();
             }
-        }
-        if (matched.length == cardsarray.length){
-               document.getElementById('instructions').innerHTML += "<br>You won! Great job!"
         }
     }
     function* quoteGenerator() {
