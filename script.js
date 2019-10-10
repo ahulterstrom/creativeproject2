@@ -5,5 +5,9 @@ fetch(myurl, { mode: 'cors' })
         return response.json();
     }).then(function(json) {
         console.log(json);
+<<<<<<< HEAD
         document.getElementById("cardimage").src = json["cards"][0].image;
+=======
+        document.getElementById("cardimage").src = json["img"];
+>>>>>>> fixed getElmentbyID
     });
