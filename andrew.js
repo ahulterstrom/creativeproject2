@@ -1,27 +1,29 @@
 function AndrewFunction(){
-    let inner 
+
     // document.getElementById("mainframe").innerHTML = "<p>Andrew</p>";
-    
+    console.log("Called AndrewFunction()");
     
     
     var node = document.getElementById('mainframe');
     var newDiv = document.createElement('div');
-    newDiv.id = ("pokedexitem" + iCount);
-    newDiv.className = "pokedexitem";
-    newDiv.onclick = function () { pokemonClicked(id) };
+    newDiv.id = "mydivid";
+    newDiv.className = "mydivclass";
+    // newDiv.onclick = function () { pokemonClicked(id) };
     var newDivImg = document.createElement('img');
-    newDivImg.id = ("pokesprite" + iCount);
-    newDivImg.className = "pokesprite";
-    newDivImg.src = "";
+    newDivImg.id = ("cardimage");
+    // newDivImg.className = "pokesprite";
+    newDivImg.src = "Back.png";
     var newDivImgBack = document.createElement('img');
-    newDivImgBack.id = ("pokespriteback" + iCount);
-    newDivImgBack.className = "hidden";
+    newDivImgBack.id = ("cardimage");
+    // newDivImgBack.className = "hidden";
     newDivImgBack.src = "";
     var newDivPname = document.createElement('p');
-    newDivPname.id = ("pokename" + iCount);
-    newDivPname.className = "pokename";
+    newDivPname.id = ("cardname");
+    // newDivPname.className = "cardname";
     newDiv.append(newDivImg, newDivPname, newDivImgBack);
     node.appendChild(newDiv);
+    
+    
     
 }
 
