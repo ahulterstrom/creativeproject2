@@ -1,6 +1,5 @@
 /* global fetch */
 var myurl;
-var div = document.getElementById("mainframe");
 var deck_id;
 var num_cards;
 var num_drawn;
@@ -12,6 +11,7 @@ function StephenFunction() {
     html += "<input type='button' id='stephenbutton' value='New Shuffled Deck' onclick='newShuffledDeck()'> ";
     html += "<hr>";
     document.getElementById("mainframe").innerHTML = html;
+    document.getElementById("mainframe2").innerHTML = "";
 }
 
 function newSortedDeck() {
@@ -35,6 +35,7 @@ function newSortedDeck() {
     html += "<h1>Sorted Deck: </h1>";
     html += "<hr>";
     document.getElementById("mainframe").innerHTML = html;
+    document.getElementById("mainframe2").innerHTML = "";
 }
 
 function newShuffledDeck() {
@@ -58,6 +59,7 @@ function newShuffledDeck() {
     html += "<h1>Shuffled Deck: </h1>";
     html += "<hr>";
     document.getElementById("mainframe").innerHTML = html;
+    document.getElementById("mainframe2").innerHTML = "";
 }
 
 function nextCard() {
@@ -75,7 +77,7 @@ function nextCard() {
                 var newImg = document.createElement("img");
                 newImg.src = json["cards"][i].image;
                 newImg.style = "margin:20px";
-                div.appendChild(newImg);
+                document.getElementById("mainframe2").appendChild(newImg);
             }
         });
 }

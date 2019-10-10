@@ -11,6 +11,7 @@
 
 function Reset() {
     document.getElementById("mainframe").innerHTML = "<p>placeholder</p>";
+    document.getElementById("mainframe2").innerHTML = "";
 }
 
 Reset();
