@@ -1,8 +1,20 @@
 .match-card {
+  display: inline-block;
   background-color: transparent;
   width: 226px;
   height: 314px;
   perspective: 1000px;
+  
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+  /*flex:1;*/
+  margin: 4px;
+  transition: 1s;
 }
 
 .match-card-inner {
@@ -12,10 +24,10 @@
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
 }
 
-.match-card:hover .match-card-inner {
+.match-card.flipped .match-card-inner {
   transform: rotateY(180deg);
 }
 
@@ -27,17 +39,23 @@
 }
 
 .match-card-front {
-  background-color: #bbb;
+  /*background-color: #bbb;*/
   color: black;
 }
 
 .match-card-back {
-  background-color: #2980b9;
+  /*background-color: #2980b9;*/
   color: white;
   transform: rotateY(180deg);
 }
 
 .match-card-img{
-    width: 226px;
-    height: 314px;
+  width: 226px;
+  height: 314px;
+}
+
+#matchingarea{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
