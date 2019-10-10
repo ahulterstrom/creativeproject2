@@ -59,6 +59,7 @@ function AndrewFunction() {
             newDivFront.className = "match-card-front";
             var newDivImg = document.createElement('img');
             newDivImg.id = ("card" + i + "front");
+            newDivImg.className = "match-card-img";
             newDivImg.src = cardsarray[i].image;
             newDivFront.append(newDivImg);
             
@@ -67,6 +68,7 @@ function AndrewFunction() {
             newDivBack.className = "match-card-back";
             var newDivImgBack = document.createElement('img');
             newDivImgBack.id = ("card" + i + "back");
+            newDivImgBack.className = "match-card-img";
             // newDivImgBack.className = "hidden";
             newDivImgBack.src = "Back.png";
             newDivBack.append(newDivImgBack);
