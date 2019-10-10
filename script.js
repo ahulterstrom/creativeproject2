@@ -9,7 +9,7 @@
 //     });
 
 
-function Reset(){
+function Reset() {
     document.getElementById("mainframe").innerHTML = "<p>placeholder</p>";
 }
 
