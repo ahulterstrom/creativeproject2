@@ -10,9 +10,12 @@
 
 
 function Reset() {
-    document.getElementById("mainframe").innerHTML = "<p>placeholder</p>";
+    console.log("Reset() called");
+    document.getElementById("mainframe").innerHTML = mainpagehtml;
     document.getElementById("mainframe2").innerHTML = "";
     document.getElementById("mainframe3").innerHTML = "";
 }
 
-Reset();
+var mainpagehtml = document.getElementById('mainframe').innerHTML;
+
+//Reset();

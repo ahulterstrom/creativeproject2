@@ -1,3 +1,27 @@
+#homepage {
+  text-align: center;
+}
+#homepage h1{
+  font-size:65px;
+  margin-top: 50px;
+}
+#homepage img{
+  max-width: 113px;
+}
+#homepage{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+#homepagebuttons{
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  width: 320px;
+}
+
+
+/*Andrew's CSS Begin*/
 .match-card {
   display: inline-block;
   background-color: transparent;
@@ -12,11 +36,9 @@
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Opera and Firefox */
-  /*flex:1;*/
   margin: 4px;
   transition: 1s;
 }
-
 .match-card-inner {
   position: relative;
   width: 100%;
@@ -108,4 +130,67 @@
 #matchresetbutton:active {
 	position:relative;
 	top:1px;
+}
+@media only screen and (max-width: 1190px) {
+  .match-card{
+    width: 113px;
+    height: 157px;
+  }
+  .match-card-img{
+    width: 113px;
+    height: 157px;
+  }
+  #matchingarea{
+    max-width: 700px;
+  }
+}
+/*Andrew's CSS end*/
+.myfooter{
+    color: #fefefe;
+    background-color: #212529
+}
+
+.homepage-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10%;
+    font-size: .8em;
+    background-color: #343a40;
+    color: #f5f5f5;
+}
+  .footer.left{
+    float:left;
+}
+.footer.left .logo{
+    width: 50px;
+    margin: 2px;
+    transition: .2s;
+}
+.footer.left .logo:hover{
+  width: 54px;
+  margin: 0px;
+}
+.footer.middle{
+    float:middle;
+}
+.footer.right{
+    float:right;
+}
+.footer a{
+    color:inherit;
+    text-decoration-line: none;
+}
+.footer a:hover{
+    color: #b4b4b4
+}
+#content{
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 156px; /* height of your footer */
 }

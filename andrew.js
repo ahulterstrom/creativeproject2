@@ -4,8 +4,6 @@ function AndrewFunction() {
     let matched = [];
     let quotesarray = [];
     let acceptingInput = true;
-
-    // document.getElementById("mainframe").innerHTML = "<p>Andrew</p>";
     console.log("Called AndrewFunction()");
 
     var myurl = "https://deckofcardsapi.com/api/deck/new/draw/?count=5";
@@ -72,7 +70,9 @@ function AndrewFunction() {
         for (i = 0; i < cardsarray.length; i++) {
             createCard(i, matchingDiv);
         }
-        node.innerHTML = "";
+        document.getElementById("mainframe").innerHTML = "";
+        document.getElementById("mainframe2").innerHTML = "";
+        document.getElementById("mainframe3").innerHTML = "";
         node.append(titleDiv, matchingDiv, buttonsDiv, winnerDiv);
         
     }

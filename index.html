@@ -2,32 +2,101 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css" />
+
 </head>
 
 <body>
-    <div>
-        <input type="button" id="andrewbutton" value="Andrew" onclick="AndrewFunction()">
-        <input type="button" id="jaredbutton" value="Jared" onclick="JaredFunction()">
-        <input type="button" id="stephenbutton" value="Stephen" onclick="StephenFunction()">
-        <input type="button" id="resetbutton" value="Reset" onclick="Reset()">
-    </div>
-    <hr>
+    <div id="content">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="">The 52 Card Wonder</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" onclick="Reset()">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="AndrewFunction()">Andrew</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="JaredFunction()">Jared</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="StephenFunction()">Stephen</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+    
     <div id="mainframe">
-        <!--<img src="" id="cardimage"></img>-->
+        <div id="homepage">
+            <h1>The 52 Card Wonder</h1>
+            <h4>-A Deck of Cards API Website-</h4>
+            <br><br>
+            <div>
+                <img src="https://deckofcardsapi.com/static/img/AD.png">
+                <img src="https://deckofcardsapi.com/static/img/KD.png">
+                <img src="https://deckofcardsapi.com/static/img/JD.png">
+                <img src="https://deckofcardsapi.com/static/img/QD.png">
+                <img src="https://deckofcardsapi.com/static/img/0D.png">
+            </div>
+            <br><br>
+            <p>Check out the parts of our site here:</p>
+            <div id="homepagebuttons">
+                <input type="button" id="resetbutton" value="Home" onclick="Reset()">
+                <input type="button" id="andrewbutton" value="Andrew" onclick="AndrewFunction()">
+                <input type="button" id="jaredbutton" value="Jared" onclick="JaredFunction()">
+                <input type="button" id="stephenbutton" value="Stephen" onclick="StephenFunction()">
+            </div>
+        </div>
 
     </div>
     <div id="mainframe2">
-        
+
     </div>
     <div id="mainframe3">
-        
+
     </div>
 
+
+
+    <footer class="footer-section">
+        <div id="homepage-footer" class="homepage-footer" style="height: 100px;">
+            <div style="float:left" class="footer left">
+
+                <p>©2019 Andrew Hulterstrom, Jared Swenson, Stephen Howard</p>
+
+            </div>
+            <div class="footer right">
+
+                <a style="height: 36px; line-height: 36px; vertical-align: middle; padding: 0px 0px" href="https://github.com/ahulterstrom/creativeproject2.git" class="backtotop link"><svg
+            style="vertical-align: top" viewBox="0 0 16 16" version="1.1" width="32"
+            aria-hidden="true">
+            <path fill="white" fill-rule="evenodd"
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+            </path>
+          </svg> GitHub Link</a>
+            </div>
+
+        </div>
+    </footer>
+    </div>
     <script src="script.js"></script>
     <script src="andrew.js"></script>
     <script src="jared.js"></script>
     <script src="stephen.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
