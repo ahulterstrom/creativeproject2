@@ -2,6 +2,8 @@ function JaredFunction()
 {
     var div = document.getElementById("mainframe");
     div.innerHTML = "";
+    document.getElementById("mainframe2").innerHTML = "";
+    document.getElementById("mainframe3").innerHTML = "";
     var deckID = 0;
     var remaining = 0;
 

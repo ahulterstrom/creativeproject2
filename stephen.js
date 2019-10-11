@@ -32,7 +32,7 @@ function newSortedDeck() {
     html += "<input type='button' id='stephenbutton' value='New Shuffled Deck' onclick='newShuffledDeck()'> ";
     html += "<input type='button' id='stephenbutton' value='Draw Card(s)' onclick='nextCard()'> <br> <br> ";
     html += "<form>";
-    html += "<label>Number of cards to draw: </label>";
+    html += "<label>Number of cards to draw:    </label>";
     html += "<input id='numInput' type='text' value='1'></input> ";
     html += "</form>";
     document.getElementById("mainframe").innerHTML = html;
@@ -59,7 +59,7 @@ function newShuffledDeck() {
     html += "<input type='button' id='stephenbutton' value='New Shuffled Deck' onclick='newShuffledDeck()'> ";
     html += "<input type='button' id='stephenbutton' value='Draw Card(s)' onclick='nextCard()'> <br> <br> ";
     html += "<form>";
-    html += "<label>Number of cards to draw: </label>";
+    html += "<label>Number of cards to draw:    </label>";
     html += "<input id='numInput' type='text' value='1'></input> ";
     html += "</form>";
     document.getElementById("mainframe").innerHTML = html;
