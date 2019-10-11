@@ -16,12 +16,17 @@ function JaredFunction()
         }).then(function(json)
         {
             console.log(json);
+            
+            var header = document.createElement("h1");
+            header.innerHTML = "The Contents of a Deck Displayed in Random Order:"
+            header.style = "margin:20px";
+            div.appendChild(header);
 
             for (let i = 0; i < 52; i++)
             {
                 var newImg = document.createElement("img");
                 newImg.src = json["cards"][i].image;
-                newImg.style = "margin:50px";
+                newImg.style = "margin:20px";
                 div.appendChild(newImg);
             }
 
